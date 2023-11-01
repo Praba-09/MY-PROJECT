@@ -1,0 +1,26 @@
+javascript
+// Simulated air quality data (replace with actual data)
+const airQualityData = {
+    aqi: 75,
+    pollutant: "PM2.5",
+};
+
+// Function to update the displayed air quality data
+function updateAirQualityDisplay() {
+    const aqiValue = document.getElementById("aqi-value");
+    aqiValue.textContent = `AQI: ${airQualityData.aqi} (Pollutant: ${airQualityData.pollutant})`;
+}
+
+// Simulate updating air quality data every 5 seconds
+setInterval(() => {
+    // Fetch and update air quality data from your device or API
+    // For this example, we'll use the simulated data
+    airQualityData.aqi = Math.floor(Math.random() * 101); // Random AQI value
+    airQualityData.pollutant = "PM2.5"; // Simulated pollutant
+
+    // Update the display
+    updateAirQualityDisplay();
+}, 5000);
+
+// Initial update of air quality data
+updateAirQualityDisplay()
