@@ -1,0 +1,13 @@
+javascript
+   const express = require('express');
+   const app = express();
+   const port = process.env.PORT || 3000;
+
+   app.use(express.json());
+
+   // Define routes for your API here
+   // Example: app.get('/api/airquality', (req, res) => { /* Handle air quality data here */ });
+
+   app.listen(port, () => {
+     console.log(`Server is running on port ${port}`);
+   });
